@@ -26,6 +26,9 @@ jobs:
           python-version: '3.x'
       # https://docs.github.com/en/actions/guides/building-and-testing-python#installing-dependencies
       # ^-- This gives info on installing dependencies with pip
+      - name: Install Sphinx
+        run: |
+          apt-get install python3-sphinx
       - name: Install dependencies
         run: |
           pip install sphinx ablog pydata_sphinx_theme sphinx_panels
