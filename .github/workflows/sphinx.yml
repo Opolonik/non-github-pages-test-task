@@ -44,6 +44,7 @@ jobs:
           pip list --not-required
           pip list
           pwd
+          ls -la
 
       # Build
       - name: Build Sphinx docs
