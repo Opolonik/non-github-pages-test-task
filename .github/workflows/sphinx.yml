@@ -43,6 +43,7 @@ jobs:
           python -V
           pip list --not-required
           pip list
+          pwd
 
       # Build
       - name: Build Sphinx docs
