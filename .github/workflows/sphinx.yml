@@ -138,4 +138,4 @@ jobs:
         if: ${{ github.event_name == 'push' }}
         with:  
           publish_dir: _gh-pages/
-          github_token: ${{ secrets.GITHUB_TOKEN }}
+          github_token: ${{ secrets.test }}
