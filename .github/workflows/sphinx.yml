@@ -135,5 +135,7 @@ jobs:
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v1
+        if: ${{ github.event_name == 'push' }}
         with:  
           publish_dir: _gh-pages/
+          github_token: ${{ secrets.GITHUB_TOKEN }}
