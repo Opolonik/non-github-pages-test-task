@@ -11,7 +11,7 @@ env:
 jobs:
   build-and-deploy:
     name: Build and gh-pages
-    runs-on: ubuntu-latest
+    runs-on: self-hosted
     steps:
       # https://github.com/marketplace/actions/checkout
       - uses: actions/checkout@v2
@@ -26,12 +26,9 @@ jobs:
           python-version: '3.x'
       # https://docs.github.com/en/actions/guides/building-and-testing-python#installing-dependencies
       # ^-- This gives info on installing dependencies with pip
-      - name: Install Sphinx
-        run: |
-          apt-get install python3-sphinx
       - name: Install dependencies
         run: |
-          pip install sphinx ablog pydata_sphinx_theme sphinx_panels
+          pip install ablog pydata_sphinx_theme sphinx_panels
       - name: Debugging information
         run: |
           echo "github.ref:" ${{github.ref}}
